@@ -1,0 +1,765 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8E454F352150028200851DE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E454F342150028200851DE1 /* AppDelegate.swift */; };
+		8E454F372150028200851DE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E454F362150028200851DE1 /* ViewController.swift */; };
+		8E454F3A2150028200851DE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E454F382150028200851DE1 /* Main.storyboard */; };
+		8E454F3C2150028300851DE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E454F3B2150028300851DE1 /* Assets.xcassets */; };
+		8E454F3F2150028300851DE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E454F3D2150028300851DE1 /* LaunchScreen.storyboard */; };
+		8E454F4A2150028300851DE1 /* BalanceYogaWaiverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E454F492150028300851DE1 /* BalanceYogaWaiverTests.swift */; };
+		8E454F552150028300851DE1 /* BalanceYogaWaiverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E454F542150028300851DE1 /* BalanceYogaWaiverUITests.swift */; };
+		8E5D752621935EE000269582 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D752521935EE000269582 /* Customer.swift */; };
+		8E5D752A21936D1500269582 /* WavierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D752921936D1500269582 /* WavierViewController.swift */; };
+		8E5D752E2193782300269582 /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D752D2193782300269582 /* EndViewController.swift */; };
+		8E842CB821B248750056D3E6 /* SwiftySignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E842CB721B248750056D3E6 /* SwiftySignature.swift */; };
+		8ECF5B8E21A2747E00990822 /* SimplePDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECF5B8C21A2747E00990822 /* SimplePDF.swift */; };
+		8ECF5B9021A8747800990822 /* CloudStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECF5B8F21A8747800990822 /* CloudStorage.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8E454F462150028300851DE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E454F292150028200851DE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E454F302150028200851DE1;
+			remoteInfo = BalanceYogaWaiver;
+		};
+		8E454F512150028300851DE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E454F292150028200851DE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E454F302150028200851DE1;
+			remoteInfo = BalanceYogaWaiver;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8E454F312150028200851DE1 /* BalanceYogaWaiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BalanceYogaWaiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E454F342150028200851DE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8E454F362150028200851DE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8E454F392150028200851DE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8E454F3B2150028300851DE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E454F3E2150028300851DE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8E454F402150028300851DE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E454F452150028300851DE1 /* BalanceYogaWaiverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BalanceYogaWaiverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E454F492150028300851DE1 /* BalanceYogaWaiverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceYogaWaiverTests.swift; sourceTree = "<group>"; };
+		8E454F4B2150028300851DE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E454F502150028300851DE1 /* BalanceYogaWaiverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BalanceYogaWaiverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E454F542150028300851DE1 /* BalanceYogaWaiverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceYogaWaiverUITests.swift; sourceTree = "<group>"; };
+		8E454F562150028300851DE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E5D752521935EE000269582 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		8E5D752921936D1500269582 /* WavierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavierViewController.swift; sourceTree = "<group>"; };
+		8E5D752D2193782300269582 /* EndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
+		8E7AAF6121B64469002ED03A /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		8E7AAF6321B644AF002ED03A /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		8E842CB721B248750056D3E6 /* SwiftySignature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftySignature.swift; sourceTree = "<group>"; };
+		8ECF5B8C21A2747E00990822 /* SimplePDF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePDF.swift; sourceTree = "<group>"; };
+		8ECF5B8D21A2747E00990822 /* SimplePDF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePDF.h; sourceTree = "<group>"; };
+		8ECF5B8F21A8747800990822 /* CloudStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudStorage.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8E454F2E2150028200851DE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E454F422150028300851DE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E454F4D2150028300851DE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8E454F282150028200851DE1 = {
+			isa = PBXGroup;
+			children = (
+				8E454F332150028200851DE1 /* BalanceYogaWaiver */,
+				8E454F482150028300851DE1 /* BalanceYogaWaiverTests */,
+				8E454F532150028300851DE1 /* BalanceYogaWaiverUITests */,
+				8E454F322150028200851DE1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8E454F322150028200851DE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E454F312150028200851DE1 /* BalanceYogaWaiver.app */,
+				8E454F452150028300851DE1 /* BalanceYogaWaiverTests.xctest */,
+				8E454F502150028300851DE1 /* BalanceYogaWaiverUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8E454F332150028200851DE1 /* BalanceYogaWaiver */ = {
+			isa = PBXGroup;
+			children = (
+				8E7AAF6021B6441D002ED03A /* Config */,
+				8E842CB721B248750056D3E6 /* SwiftySignature.swift */,
+				8ECF5B8F21A8747800990822 /* CloudStorage.swift */,
+				8E454F342150028200851DE1 /* AppDelegate.swift */,
+				8E5D752D2193782300269582 /* EndViewController.swift */,
+				8ECF5B8D21A2747E00990822 /* SimplePDF.h */,
+				8ECF5B8C21A2747E00990822 /* SimplePDF.swift */,
+				8E454F362150028200851DE1 /* ViewController.swift */,
+				8E454F382150028200851DE1 /* Main.storyboard */,
+				8E454F3B2150028300851DE1 /* Assets.xcassets */,
+				8E454F3D2150028300851DE1 /* LaunchScreen.storyboard */,
+				8E454F402150028300851DE1 /* Info.plist */,
+				8E5D752521935EE000269582 /* Customer.swift */,
+				8E5D752921936D1500269582 /* WavierViewController.swift */,
+			);
+			path = BalanceYogaWaiver;
+			sourceTree = "<group>";
+		};
+		8E454F482150028300851DE1 /* BalanceYogaWaiverTests */ = {
+			isa = PBXGroup;
+			children = (
+				8E454F492150028300851DE1 /* BalanceYogaWaiverTests.swift */,
+				8E454F4B2150028300851DE1 /* Info.plist */,
+			);
+			path = BalanceYogaWaiverTests;
+			sourceTree = "<group>";
+		};
+		8E454F532150028300851DE1 /* BalanceYogaWaiverUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8E454F542150028300851DE1 /* BalanceYogaWaiverUITests.swift */,
+				8E454F562150028300851DE1 /* Info.plist */,
+			);
+			path = BalanceYogaWaiverUITests;
+			sourceTree = "<group>";
+		};
+		8E7AAF6021B6441D002ED03A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				8E7AAF6121B64469002ED03A /* Development.xcconfig */,
+				8E7AAF6321B644AF002ED03A /* Release.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8E454F302150028200851DE1 /* BalanceYogaWaiver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E454F592150028300851DE1 /* Build configuration list for PBXNativeTarget "BalanceYogaWaiver" */;
+			buildPhases = (
+				8E454F2D2150028200851DE1 /* Sources */,
+				8E454F2E2150028200851DE1 /* Frameworks */,
+				8E454F2F2150028200851DE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BalanceYogaWaiver;
+			productName = BalanceYogaWaiver;
+			productReference = 8E454F312150028200851DE1 /* BalanceYogaWaiver.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8E454F442150028300851DE1 /* BalanceYogaWaiverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E454F5C2150028300851DE1 /* Build configuration list for PBXNativeTarget "BalanceYogaWaiverTests" */;
+			buildPhases = (
+				8E454F412150028300851DE1 /* Sources */,
+				8E454F422150028300851DE1 /* Frameworks */,
+				8E454F432150028300851DE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E454F472150028300851DE1 /* PBXTargetDependency */,
+			);
+			name = BalanceYogaWaiverTests;
+			productName = BalanceYogaWaiverTests;
+			productReference = 8E454F452150028300851DE1 /* BalanceYogaWaiverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8E454F4F2150028300851DE1 /* BalanceYogaWaiverUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E454F5F2150028300851DE1 /* Build configuration list for PBXNativeTarget "BalanceYogaWaiverUITests" */;
+			buildPhases = (
+				8E454F4C2150028300851DE1 /* Sources */,
+				8E454F4D2150028300851DE1 /* Frameworks */,
+				8E454F4E2150028300851DE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E454F522150028300851DE1 /* PBXTargetDependency */,
+			);
+			name = BalanceYogaWaiverUITests;
+			productName = BalanceYogaWaiverUITests;
+			productReference = 8E454F502150028300851DE1 /* BalanceYogaWaiverUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8E454F292150028200851DE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = rixcore;
+				TargetAttributes = {
+					8E454F302150028200851DE1 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					8E454F442150028300851DE1 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 8E454F302150028200851DE1;
+					};
+					8E454F4F2150028300851DE1 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 8E454F302150028200851DE1;
+					};
+				};
+			};
+			buildConfigurationList = 8E454F2C2150028200851DE1 /* Build configuration list for PBXProject "BalanceYogaWaiver" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8E454F282150028200851DE1;
+			productRefGroup = 8E454F322150028200851DE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E454F302150028200851DE1 /* BalanceYogaWaiver */,
+				8E454F442150028300851DE1 /* BalanceYogaWaiverTests */,
+				8E454F4F2150028300851DE1 /* BalanceYogaWaiverUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8E454F2F2150028200851DE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E454F3F2150028300851DE1 /* LaunchScreen.storyboard in Resources */,
+				8E454F3C2150028300851DE1 /* Assets.xcassets in Resources */,
+				8E454F3A2150028200851DE1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E454F432150028300851DE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E454F4E2150028300851DE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8E454F2D2150028200851DE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E842CB821B248750056D3E6 /* SwiftySignature.swift in Sources */,
+				8ECF5B8E21A2747E00990822 /* SimplePDF.swift in Sources */,
+				8ECF5B9021A8747800990822 /* CloudStorage.swift in Sources */,
+				8E5D752E2193782300269582 /* EndViewController.swift in Sources */,
+				8E5D752621935EE000269582 /* Customer.swift in Sources */,
+				8E454F372150028200851DE1 /* ViewController.swift in Sources */,
+				8E5D752A21936D1500269582 /* WavierViewController.swift in Sources */,
+				8E454F352150028200851DE1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E454F412150028300851DE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E454F4A2150028300851DE1 /* BalanceYogaWaiverTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E454F4C2150028300851DE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E454F552150028300851DE1 /* BalanceYogaWaiverUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8E454F472150028300851DE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E454F302150028200851DE1 /* BalanceYogaWaiver */;
+			targetProxy = 8E454F462150028300851DE1 /* PBXContainerItemProxy */;
+		};
+		8E454F522150028300851DE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E454F302150028200851DE1 /* BalanceYogaWaiver */;
+			targetProxy = 8E454F512150028300851DE1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8E454F382150028200851DE1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E454F392150028200851DE1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8E454F3D2150028300851DE1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E454F3E2150028300851DE1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8E454F572150028300851DE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E7AAF6121B64469002ED03A /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8E454F582150028300851DE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E7AAF6321B644AF002ED03A /* Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8E454F5A2150028300851DE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E7AAF6121B64469002ED03A /* Development.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U2LJG862Y5;
+				INFOPLIST_FILE = BalanceYogaWaiver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rixcore.BalanceYogaWaiver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8E454F5B2150028300851DE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E7AAF6321B644AF002ED03A /* Release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U2LJG862Y5;
+				INFOPLIST_FILE = BalanceYogaWaiver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rixcore.BalanceYogaWaiver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8E454F5D2150028300851DE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E7AAF6121B64469002ED03A /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U2LJG862Y5;
+				INFOPLIST_FILE = BalanceYogaWaiverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rixcore.BalanceYogaWaiverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BalanceYogaWaiver.app/BalanceYogaWaiver";
+			};
+			name = Debug;
+		};
+		8E454F5E2150028300851DE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E7AAF6321B644AF002ED03A /* Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U2LJG862Y5;
+				INFOPLIST_FILE = BalanceYogaWaiverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rixcore.BalanceYogaWaiverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BalanceYogaWaiver.app/BalanceYogaWaiver";
+			};
+			name = Release;
+		};
+		8E454F602150028300851DE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E7AAF6121B64469002ED03A /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U2LJG862Y5;
+				INFOPLIST_FILE = BalanceYogaWaiverUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rixcore.BalanceYogaWaiverUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BalanceYogaWaiver;
+			};
+			name = Debug;
+		};
+		8E454F612150028300851DE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E7AAF6321B644AF002ED03A /* Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U2LJG862Y5;
+				INFOPLIST_FILE = BalanceYogaWaiverUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rixcore.BalanceYogaWaiverUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BalanceYogaWaiver;
+			};
+			name = Release;
+		};
+		8E7AAF6421B647EA002ED03A /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E7AAF6121B64469002ED03A /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Development;
+		};
+		8E7AAF6521B647EA002ED03A /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E7AAF6121B64469002ED03A /* Development.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U2LJG862Y5;
+				INFOPLIST_FILE = BalanceYogaWaiver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rixcore.BalanceYogaWaiver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Development;
+		};
+		8E7AAF6621B647EA002ED03A /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E7AAF6121B64469002ED03A /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U2LJG862Y5;
+				INFOPLIST_FILE = BalanceYogaWaiverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rixcore.BalanceYogaWaiverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BalanceYogaWaiver.app/BalanceYogaWaiver";
+			};
+			name = Development;
+		};
+		8E7AAF6721B647EA002ED03A /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E7AAF6121B64469002ED03A /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U2LJG862Y5;
+				INFOPLIST_FILE = BalanceYogaWaiverUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rixcore.BalanceYogaWaiverUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BalanceYogaWaiver;
+			};
+			name = Development;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E454F2C2150028200851DE1 /* Build configuration list for PBXProject "BalanceYogaWaiver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E454F572150028300851DE1 /* Debug */,
+				8E7AAF6421B647EA002ED03A /* Development */,
+				8E454F582150028300851DE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E454F592150028300851DE1 /* Build configuration list for PBXNativeTarget "BalanceYogaWaiver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E454F5A2150028300851DE1 /* Debug */,
+				8E7AAF6521B647EA002ED03A /* Development */,
+				8E454F5B2150028300851DE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E454F5C2150028300851DE1 /* Build configuration list for PBXNativeTarget "BalanceYogaWaiverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E454F5D2150028300851DE1 /* Debug */,
+				8E7AAF6621B647EA002ED03A /* Development */,
+				8E454F5E2150028300851DE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E454F5F2150028300851DE1 /* Build configuration list for PBXNativeTarget "BalanceYogaWaiverUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E454F602150028300851DE1 /* Debug */,
+				8E7AAF6721B647EA002ED03A /* Development */,
+				8E454F612150028300851DE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8E454F292150028200851DE1 /* Project object */;
+}

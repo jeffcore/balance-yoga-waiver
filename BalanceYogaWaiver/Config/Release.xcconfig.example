@@ -1,0 +1,15 @@
+//
+//  Release.xcconfig
+//  BalanceYogaWaiver
+//
+//  Created by rixcore on 12/3/18.
+//  Copyright © 2018 rixcore. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+STUDIO_ID=
+API_LOGIN_NAME=
+API_PASSWORD=
+API_KEY=
+GOOGLE_STORAGE_API_KEY=
