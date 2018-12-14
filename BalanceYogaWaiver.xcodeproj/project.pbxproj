@@ -19,7 +19,6 @@
 		8E5D752E2193782300269582 /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5D752D2193782300269582 /* EndViewController.swift */; };
 		8E842CB821B248750056D3E6 /* SwiftySignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E842CB721B248750056D3E6 /* SwiftySignature.swift */; };
 		8ECF5B8E21A2747E00990822 /* SimplePDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECF5B8C21A2747E00990822 /* SimplePDF.swift */; };
-		8ECF5B9021A8747800990822 /* CloudStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECF5B8F21A8747800990822 /* CloudStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +60,6 @@
 		8E842CB721B248750056D3E6 /* SwiftySignature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftySignature.swift; sourceTree = "<group>"; };
 		8ECF5B8C21A2747E00990822 /* SimplePDF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePDF.swift; sourceTree = "<group>"; };
 		8ECF5B8D21A2747E00990822 /* SimplePDF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePDF.h; sourceTree = "<group>"; };
-		8ECF5B8F21A8747800990822 /* CloudStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +112,6 @@
 			children = (
 				8E7AAF6021B6441D002ED03A /* Config */,
 				8E842CB721B248750056D3E6 /* SwiftySignature.swift */,
-				8ECF5B8F21A8747800990822 /* CloudStorage.swift */,
 				8E454F342150028200851DE1 /* AppDelegate.swift */,
 				8E5D752D2193782300269582 /* EndViewController.swift */,
 				8ECF5B8D21A2747E00990822 /* SimplePDF.h */,
@@ -290,7 +287,6 @@
 			files = (
 				8E842CB821B248750056D3E6 /* SwiftySignature.swift in Sources */,
 				8ECF5B8E21A2747E00990822 /* SimplePDF.swift in Sources */,
-				8ECF5B9021A8747800990822 /* CloudStorage.swift in Sources */,
 				8E5D752E2193782300269582 /* EndViewController.swift in Sources */,
 				8E5D752621935EE000269582 /* Customer.swift in Sources */,
 				8E454F372150028200851DE1 /* ViewController.swift in Sources */,
