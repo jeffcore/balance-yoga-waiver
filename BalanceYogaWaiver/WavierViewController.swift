@@ -8,11 +8,16 @@
 
 import UIKit
 
-class WavierViewController: UIViewController, SignatureViewDelegate {
+class WavierViewController: UIViewController, SignatureViewDelegate, XMLParserDelegate {
     var customer: Customer?
     var signatureFinal: UIImage?
     var signatureCount = 0
     var googleStorageAPIKey: String = ""
+    var currentElement: String = ""
+    var clientID: String = ""
+    var siteID: String = ""
+    var apiKey: String = ""
+    
     
     @IBOutlet weak var signatureView: SignatureView!
     @IBOutlet weak var signatureDate: UILabel!
@@ -44,7 +49,6 @@ class WavierViewController: UIViewController, SignatureViewDelegate {
         customer!.printCustomer()
         getPlist()
     }
-
     func getPlist() {
         var resourceFileDictionary: NSDictionary?
         
@@ -54,9 +58,10 @@ class WavierViewController: UIViewController, SignatureViewDelegate {
         }
         
         if let resourceFileDictionaryContent = resourceFileDictionary {
-            
             // Get something from our Info.plist like MinimumOSVersion
             self.googleStorageAPIKey = resourceFileDictionaryContent.object(forKey: "GOOGLE_STORAGE_API_KEY")! as! String
+            self.siteID = resourceFileDictionaryContent.object(forKey: "STUDIO_ID")! as! String
+            self.apiKey = resourceFileDictionaryContent.object(forKey: "API_KEY")! as! String
         }
     }
     
@@ -76,8 +81,11 @@ class WavierViewController: UIViewController, SignatureViewDelegate {
         indicator.startAnimating()
         if signatureCount > 10 {
             customer!.sendCustomerAPI {
-                (statusCode) in
+                (statusCode, data) in
                 if statusCode == 200 {
+                    let parser = XMLParser(data: data ?? Data())
+                    parser.delegate = self
+                    parser.parse()
                     print("AppDelegate.swift: status of run quantumDB.syncToServer  call - \(statusCode)")
                     self.customer!.sendCustomerPasswordResetAPI {
                         (statusCode) in
@@ -115,6 +123,21 @@ class WavierViewController: UIViewController, SignatureViewDelegate {
         } else {
             print("you did not sign your name")
         }
+    }
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+        currentElement = elementName
+
+        if currentElement == "Client" {
+            self.clientID = ""
+        }
+    }
+
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
+        switch currentElement {
+        case "UniqueID": self.clientID += string
+        default: break
+        }
+        print("client id \(self.clientID)")
     }
     
     func alert(title: String) {
@@ -198,33 +221,83 @@ class WavierViewController: UIViewController, SignatureViewDelegate {
    
         let fileName = customer?.fileName()
         
-        let is_URL: String = "https://www.googleapis.com/upload/storage/v1/b/balance-waivers/o?uploadType=media&key=\(googleStorageAPIKey)&name=\(String(describing: fileName!))"
-        print(is_URL)
+        let is_SoapMessage: String = """
+            <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://clients.mindbodyonline.com/api/0_5_1">
+                <soapenv:Header/>
+                <soapenv:Body>
+                    <UploadClientDocument>
+                        <Request>
+                            <ClientID>\(self.clientID)</ClientID>
+                            <FileName>\(fileName!)</FileName>
+                            <Bytes>\(pdfData.base64EncodedString())</Bytes>
+                        </Request>
+                    </UploadClientDocument>
+                </soapenv:Body>
+            </soapenv:Envelope>
+        """
+        // print(is_SoapMessage)
+
+        let is_URL: String = "https://api.mindbodyonline.com/0_5_1/ClientService.asmx"
+
         let lobj_Request = NSMutableURLRequest(url: NSURL(string: is_URL)! as URL)
         let session = URLSession.shared
+        print("api key \(self.apiKey)")
+        print("site id \(self.siteID)")
         lobj_Request.httpMethod = "POST"
-        lobj_Request.httpBody = pdfData
-        lobj_Request.addValue("application/pdf", forHTTPHeaderField: "Content-Type")
-        lobj_Request.addValue(String(pdfData.count), forHTTPHeaderField: "Content-Length")
-        
+        lobj_Request.httpBody = is_SoapMessage.data(using: String.Encoding.utf8)
+        lobj_Request.addValue("text/xml; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        lobj_Request.addValue(String(is_SoapMessage.count), forHTTPHeaderField: "Content-Length")
+        lobj_Request.addValue("http://clients.mindbodyonline.com/api/0_5_1/UploadClientDocument", forHTTPHeaderField: "SOAPAction")
+        lobj_Request.addValue("\(self.apiKey)", forHTTPHeaderField: "API-key")
+        lobj_Request.addValue("\(self.siteID)", forHTTPHeaderField: "SiteId")
+
         let task = session.dataTask(with: lobj_Request as URLRequest, completionHandler: {data, response, error -> Void in
             print("Response: \(String(describing: response))")
-            let strData = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            print("Body: \(strData! as String))")
-            
-            if error == nil {
+            let strData = NSString(data: data ?? Data() , encoding: String.Encoding.utf8.rawValue)
+            print("Body: \(strData! as String)")
+
+            if error != nil
+            {
+                callback(400)
+                print("Error: " + error.debugDescription)
+            } else {
                 if let httpResponse = response as? HTTPURLResponse {
                     print("status code \(httpResponse.statusCode)")
                     callback(httpResponse.statusCode)
                 } else {
                     callback(400)
                 }
-            } else {
-                callback(400)
-                print("Error: " + error.debugDescription)
             }
         })
         task.resume()
+        
+//        let is_URL: String = "https://www.googleapis.com/upload/storage/v1/b/balance-waivers/o?uploadType=media&key=\(googleStorageAPIKey)&name=\(String(describing: fileName!))"
+//        print(is_URL)
+//        let lobj_Request = NSMutableURLRequest(url: NSURL(string: is_URL)! as URL)
+//        let session = URLSession.shared
+//        lobj_Request.httpMethod = "POST"
+//        lobj_Request.httpBody = pdfData
+//        lobj_Request.addValue("application/pdf", forHTTPHeaderField: "Content-Type")
+//        lobj_Request.addValue(String(pdfData.count), forHTTPHeaderField: "Content-Length")
+//
+//        let task = session.dataTask(with: lobj_Request as URLRequest, completionHandler: {data, response, error -> Void in
+//            print("Response: \(String(describing: response))")
+//            let strData = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+//            print("Body: \(strData! as String))")
+//
+//            if error == nil {
+//                if let httpResponse = response as? HTTPURLResponse {
+//                    print("status code \(httpResponse.statusCode)")
+//                    callback(httpResponse.statusCode)
+//                } else {
+//                    callback(400)
+//                }
+//            } else {
+//                callback(400)
+//                print("Error: " + error.debugDescription)
+//            }
+//        })
+//        task.resume()
         
 //        if let documentDirectories = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first {
 //            // make uniquename

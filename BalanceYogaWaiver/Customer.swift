@@ -63,7 +63,7 @@ class Customer {
     }
     
     func fileName() -> String {
-        return "\(self.removeSpecialCharsFromString(text: self.firstName))-\(self.removeSpecialCharsFromString(text: self.lastName))-\(UUID().uuidString).pdf"
+        return "\(self.removeSpecialCharsFromString(text: self.firstName))-\(self.removeSpecialCharsFromString(text: self.lastName))-Liability-Wavier.pdf"
     }
     
     private func removeSpecialCharsFromString(text: String) -> String {
@@ -90,7 +90,7 @@ class Customer {
         """
     }
     
-    func sendCustomerAPI(withCallBack callback: @escaping (Int) -> ()) {
+    func sendCustomerAPI(withCallBack callback: @escaping (Int, Data?) -> ()) {
         var birthDateSoap = ""
         if (self.birthDate! != "") {
             birthDateSoap = "<BirthDate>\(self.birthDate!)</BirthDate>"
@@ -155,20 +155,21 @@ class Customer {
 
             if error != nil
             {
-                callback(400)
+                callback(400, data)
                 print("Error: " + error.debugDescription)
             } else {                
                 if let httpResponse = response as? HTTPURLResponse {
                     print("status code \(httpResponse.statusCode)")
-                    callback(httpResponse.statusCode)
+                    callback(httpResponse.statusCode, data)
                 } else {
-                    callback(400)
+                    callback(400, data)
                 }
             }
         })
         task.resume()
     }
     
+
     
     func sendCustomerPasswordResetAPI(withCallBack callback: @escaping (Int) -> ()) {
         let is_SoapMessage: String = """
