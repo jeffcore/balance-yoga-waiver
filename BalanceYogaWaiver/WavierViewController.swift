@@ -16,8 +16,7 @@ class WavierViewController: UIViewController, SignatureViewDelegate, XMLParserDe
     var currentElement: String = ""
     var clientID: String = ""
     var siteID: String = ""
-    var apiKey: String = ""
-    
+    var apiKey: String = ""    
     
     @IBOutlet weak var signatureView: SignatureView!
     @IBOutlet weak var signatureDate: UILabel!
